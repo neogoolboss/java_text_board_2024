@@ -10,16 +10,23 @@ public class Main {
 
         System.out.println("== 게시판 v 0.1 ==");
         System.out.println("== 게시판 시작 ==");
-        System.out.printf("명령) ");
-        String cmd = sc.nextLine();
-        System.out.println("입력된 명령어는 " + cmd + " 입니다.");
-        System.out.printf("입력된 명령어 : %s\n", cmd);
+
+        while (true) {
+            System.out.printf("명령) ");
+            String cmd = sc.nextLine();
+            System.out.printf("입력된 명령어 : %s\n", cmd);
+
+            if (cmd.equals("exit")){
+                System.out.println("프로그램을 종료합니다.");
+                break;
+            }
+        }
         System.out.println("== 게시판 실행 끝 ==");
 
         sc.close();
 
-
-
     }
+
+
 
 }

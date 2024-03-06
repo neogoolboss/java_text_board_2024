@@ -15,13 +15,15 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-
-        int articleLastId = 0;
         Article lastArticle = null;
+        int articleLastId = 0;
 
         List<Article> articles = new ArrayList<>();
-
         makeTestData(articles); // 프로그램 리팩토링
+
+        if (articles.size() > 0) {
+            articleLastId = articles.get(articles.size() -1).id;
+        }
 
         System.out.println("== 게시판 v 0.1 ==");
         System.out.println("== 게시판 시작 ==");
